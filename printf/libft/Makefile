@@ -6,7 +6,7 @@
 #    By: jteste <jteste@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/20 11:42:35 by jteste            #+#    #+#              #
-#    Updated: 2023/10/31 13:23:41 by jteste           ###   ########.fr        #
+#    Updated: 2024/02/13 12:56:54 by jteste           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,15 +50,7 @@ SRCS        :=      ft_substr.c \
 						  ft_split.c
 
 
-SRC_BONUS := 	ft_lstnew.c \
-				ft_lstadd_front.c \
-				ft_lstsize.c \
-				ft_lstlast.c \
-				ft_lstadd_back.c \
-				ft_lstdelone.c \
-				ft_lstclear.c \
-				ft_lstiter.c \
-				ft_lstmap.c
+SRC_BONUS :=
                           
 OBJS        := $(SRCS:.c=.o)
 

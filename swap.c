@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 14:34:49 by jteste            #+#    #+#             */
-/*   Updated: 2023/10/30 17:04:13 by jteste           ###   ########.fr       */
+/*   Created: 2024/02/13 14:40:17 by jteste            #+#    #+#             */
+/*   Updated: 2024/02/13 16:08:13 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_swap(t_list **stack)
 {
-	t_list	*temp;
+	t_list	*first;
+	t_list	*second;
+	t_list	*third;
 
-	if (lst == NULL || new == NULL)
-		return ;
-	if (*lst == NULL)
-	{
-		*lst = new;
-		return ;
-	}
-	temp = *lst;
-	while (temp->next != NULL)
-		temp = temp->next;
-	temp->next = new;
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+		return (false);
+	first = *stack;
+	second = first->next;
+	third = second->next;
+	
 }

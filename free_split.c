@@ -6,13 +6,13 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:09:30 by jteste            #+#    #+#             */
-/*   Updated: 2024/02/12 15:12:07 by jteste           ###   ########.fr       */
+/*   Updated: 2024/02/13 14:35:45 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_free_split(char **tab)
+int	ft_free_split(char **tab)
 {
 	int	i;
 
@@ -23,4 +23,5 @@ void	ft_free_split(char **tab)
 		i++;
 	}
 	free(tab);
+	return (false);
 }

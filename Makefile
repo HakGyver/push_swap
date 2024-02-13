@@ -6,7 +6,7 @@
 #    By: jteste <jteste@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/20 11:42:35 by jteste            #+#    #+#              #
-#    Updated: 2024/02/12 15:20:50 by jteste           ###   ########.fr        #
+#    Updated: 2024/02/13 12:57:17 by jteste           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ LIBS	:= $(FTPRINTF)/libftprintf.a
 SRCS	:= 	main.c \
 			parsing.c \
 			free_split.c \
+			lst.c \
 
 OBJS	:= $(SRCS:.c=.o)
 CC 		= gcc $(CFLAGS)

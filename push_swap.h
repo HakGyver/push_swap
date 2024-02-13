@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 12:56:43 by jteste            #+#    #+#             */
-/*   Updated: 2024/02/12 15:19:44 by jteste           ###   ########.fr       */
+/*   Updated: 2024/02/13 15:07:16 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,22 @@
 # include <stdio.h>
 # include <stdbool.h>
 
-int		ft_check_and_add(char **argv);
+typedef struct s_list
+{
+	int				content;
+	struct s_list	*next;
+	struct s_list	*prev;
+}	t_list;
+
+int		ft_check_and_add(t_list **stack_a, char **argv);
 int		ft_check_value(char *argv);
 int		ft_check_int(long long nb);
-void	ft_free_split(char **tab);
+int		ft_free_split(char **tab);
+t_list	*ft_lstnew(int content);
+t_list	*ft_lstlast(t_list *lst);
+int		ft_lstsize(t_list *lst);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+int		ft_check_duplicate(t_list **stack_a);
 
 #endif
