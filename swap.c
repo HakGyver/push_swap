@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:40:17 by jteste            #+#    #+#             */
-/*   Updated: 2024/02/13 16:08:13 by jteste           ###   ########.fr       */
+/*   Updated: 2024/02/15 15:48:56 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,28 @@ int	ft_swap(t_list **stack)
 	first = *stack;
 	second = first->next;
 	third = second->next;
-	
+	first->prev = second;
+	first->next = third;
+	second->next = first;
+	second->prev = NULL;
+	if (third)
+		third->prev = first;
+	*stack = second;
+	return (true);
+}
+
+int	ft_swap_a(t_list **stack_a)
+{
+	if (ft_swap(stack_a) == false)
+		return (false);
+	ft_printf("sa\n");
+	return (true);
+}
+
+int	ft_swap_b(t_list **stack_b)
+{
+	if (ft_swap(stack_b) == false)
+		return (false);
+	ft_printf("sb\n");
+	return (true);
 }

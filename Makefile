@@ -6,7 +6,7 @@
 #    By: jteste <jteste@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/20 11:42:35 by jteste            #+#    #+#              #
-#    Updated: 2024/02/13 12:57:17 by jteste           ###   ########.fr        #
+#    Updated: 2024/02/15 15:36:20 by jteste           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS	:= 	main.c \
 			parsing.c \
 			free_split.c \
 			lst.c \
+			swap.c \
 
 OBJS	:= $(SRCS:.c=.o)
 CC 		= gcc $(CFLAGS)
