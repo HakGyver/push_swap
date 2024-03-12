@@ -1,60 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 14:40:17 by jteste            #+#    #+#             */
-/*   Updated: 2024/02/15 16:46:53 by jteste           ###   ########.fr       */
+/*   Created: 2024/03/12 07:48:10 by jteste            #+#    #+#             */
+/*   Updated: 2024/03/12 08:03:56 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_swap(t_list **stack)
+int	ft_rotate(t_list **stack)
 {
 	t_list	*first;
-	t_list	*second;
-	t_list	*third;
+	t_list	*last;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
 		return (false);
 	first = *stack;
-	second = first->next;
-	third = second->next;
-	first->prev = second;
-	first->next = third;
-	second->next = first;
-	second->prev = NULL;
-	if (third)
-		third->prev = first;
-	*stack = second;
+	*stack = (*stack)->next;
+	(*stack)->prev = NULL;
+	last = ft_lstlast(*stack);
+	last->next = first;
+	first->prev = last;
+	first->next = NULL;
 	return (true);
 }
 
-int	ft_sa(t_list **stack_a)
+int	ft_ra(t_list **stack_a)
 {
-	if (ft_swap(stack_a) == false)
+	if (ft_rotate(stack_a) == false)
 		return (false);
-	ft_printf("sa\n");
+	ft_printf("ra\n");
 	return (true);
 }
 
-int	ft_sb(t_list **stack_b)
+int	ft_rb(t_list **stack_b)
 {
-	if (ft_swap(stack_b) == false)
+	if (ft_rotate(stack_b) == false)
 		return (false);
-	ft_printf("sb\n");
+	ft_printf("rb\n");
 	return (true);
 }
 
-int	ft_ss(t_list **stack_a, t_list **stack_b)
+int	ft_rr(t_list **stack_a, t_list **stack_b)
 {
-	if (ft_swap(stack_a) == false)
+	if (ft_rotate(stack_a) == false)
 		return (false);
-	if (ft_swap(stack_b) == false)
+	if (ft_rotate(stack_b) == false)
 		return (false);
-	ft_printf("ss\n");
+	ft_printf("rr\n");
 	return (true);
 }

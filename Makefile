@@ -6,7 +6,7 @@
 #    By: jteste <jteste@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/20 11:42:35 by jteste            #+#    #+#              #
-#    Updated: 2024/02/15 15:36:20 by jteste           ###   ########.fr        #
+#    Updated: 2024/03/12 08:18:34 by jteste           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,9 @@ SRCS	:= 	main.c \
 			free_split.c \
 			lst.c \
 			swap.c \
+			push.c \
+			rotate.c \
+			reverse_rotate.c \
 
 OBJS	:= $(SRCS:.c=.o)
 CC 		= gcc $(CFLAGS)
