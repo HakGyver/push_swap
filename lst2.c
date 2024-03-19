@@ -6,24 +6,21 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:39:19 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/19 00:47:18 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/19 03:07:06 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool	is_sorted(t_list **stack)
+bool	is_sorted(t_list *stack)
 {
-	t_list	*current;
-
-	current = *stack;
-	if (*stack == NULL)
+	if (stack == NULL)
 		return (true);
-	while (current->next != NULL)
+	while (stack->next != NULL)
 	{
-		if (current->content > current->next->content)
+		if (stack->content > stack->next->content)
 			return (false);
-		current = current->next;
+		stack = stack->next;
 	}
 	return (true);
 }

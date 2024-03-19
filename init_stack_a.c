@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 01:17:49 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/19 02:01:35 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/19 03:50:35 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	calc_index(t_list *stack)
 		else
 			stack->above_median = false;
 		stack = stack->next;
-		i++;
+		++i;
 	}
 }
 
@@ -80,9 +80,9 @@ void	calc_push_cost(t_list *stack_a, t_list *stack_b)
 	while (stack_a != NULL)
 	{
 		stack_a->push_cost = stack_a->index;
-		if (stack_a->above_median == false)
+		if (!(stack_a->above_median))
 			stack_a->push_cost = len_a - (stack_a->index);
-		if (stack_a->above_median == true)
+		if (stack_a->above_median)
 			stack_a->push_cost += stack_a->target->index;
 		else
 			stack_a->push_cost += len_b - (stack_a->target->index);

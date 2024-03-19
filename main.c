@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:05:01 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/19 00:58:00 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/19 03:10:05 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 int	main(int argc, char *argv[])
 {
 	t_list	*stack_a;
-	// t_list	*stack_b;
+	t_list	*stack_b;
 	int		i;
 
 	stack_a = NULL;
-	// stack_b = NULL;
+	stack_b = NULL;
 	i = 1;
 	if (argc == 1 || ((argc == 2) && argv[1][0] == '\0'))
 		exit(0);
@@ -32,12 +32,14 @@ int	main(int argc, char *argv[])
 		}
 		i++;
 	}
-	if (!is_sorted(&stack_a))
+	if (!is_sorted(stack_a))
 	{
 		if (ft_lstsize(stack_a) == 2)
 			ft_sa(&stack_a);
 		else if (ft_lstsize(stack_a) == 3)
 			sort_three(&stack_a);
+		else
+			sort_stack(&stack_a, &stack_b);
 	}
 	return (0);
 }

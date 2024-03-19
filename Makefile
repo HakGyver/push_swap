@@ -6,7 +6,7 @@
 #    By: jteste <jteste@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/20 11:42:35 by jteste            #+#    #+#              #
-#    Updated: 2024/03/19 02:01:54 by jteste           ###   ########.fr        #
+#    Updated: 2024/03/19 03:14:48 by jteste           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRCS	:= 	main.c \
 			sort_three.c \
 			sort_stack.c \
 			init_stack_a.c \
+			init_stack_b.c \
 
 OBJS	:= $(SRCS:.c=.o)
 CC 		= gcc $(CFLAGS)
