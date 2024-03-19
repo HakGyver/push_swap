@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:05:01 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/19 03:10:05 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/19 17:30:09 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ int	main(int argc, char *argv[])
 		else
 			sort_stack(&stack_a, &stack_b);
 	}
+	ft_free_stack(&stack_a);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 12:56:43 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/19 03:12:03 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/19 17:29:33 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ t_list	*ft_lstlast(t_list *lst);
 int		ft_lstsize(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_free_stack(t_list **stack);
 
 /*SWAP FUNCTIONS*/
 int		ft_swap(t_list **stack);

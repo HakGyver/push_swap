@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:52:27 by jteste            #+#    #+#             */
-/*   Updated: 2024/02/13 15:07:37 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/19 17:40:47 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ t_list	*ft_lstnew(int content)
 	newlist->content = content;
 	newlist->prev = NULL;
 	newlist->next = NULL;
+	newlist->cheapest = false;
 	return (newlist);
 }
 
