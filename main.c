@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:05:01 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/12 09:02:49 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/19 00:58:00 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	main(int argc, char *argv[])
 {
 	t_list	*stack_a;
 	// t_list	*stack_b;
-	t_list	*tmp;
 	int		i;
 
 	stack_a = NULL;
@@ -33,18 +32,12 @@ int	main(int argc, char *argv[])
 		}
 		i++;
 	}
-	tmp = stack_a;
-	while (stack_a != NULL)
+	if (!is_sorted(&stack_a))
 	{
-		printf("stack a : %d\n", stack_a->content);
-		stack_a = stack_a->next;
-	}
-	stack_a = tmp;
-	ft_ra(&stack_a);
-	while (stack_a != NULL)
-	{
-		printf("stack a : %d\n", stack_a->content);
-		stack_a = stack_a->next;
+		if (ft_lstsize(stack_a) == 2)
+			ft_sa(&stack_a);
+		else if (ft_lstsize(stack_a) == 3)
+			sort_three(&stack_a);
 	}
 	return (0);
 }

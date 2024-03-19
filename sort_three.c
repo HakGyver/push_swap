@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_3.c                                           :+:      :+:    :+:   */
+/*   sort_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:18:39 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/12 11:28:37 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/19 00:53:11 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	is_sorted(t_list **stack)
+void	sort_three(t_list **stack)
 {
-	t_list	*current;
+	t_list	*biggest;
 
-	current = *stack;
-	if (*stack == NULL)
-		return (true);
-	while (current->next != NULL)
-	{
-		if (current->content > current->next->content)
-			return (false);
-		current = current->next;
-	}
-	return (true);
+	biggest = max_in_stack(*stack);
+	if (biggest == *stack)
+		ft_ra(stack);
+	else if (biggest == (*stack)->next)
+		ft_rra(stack);
+	if ((*stack)->content > (*stack)->next->content)
+		ft_sa(stack);
 }
