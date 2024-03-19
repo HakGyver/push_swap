@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 08:08:55 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/19 02:25:28 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/19 16:45:21 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	ft_rrr(t_list **stack_a, t_list **stack_b)
 void	rev_rotate_both(t_list **stack_a, t_list **stack_b, t_list *cheapest)
 {
 	while (*stack_b != cheapest->target && *stack_a != cheapest)
-		ft_rrr(stack_a, stack_a);
+		ft_rrr(stack_a, stack_b);
 	calc_index(*stack_a);
 	calc_index(*stack_b);
 }
