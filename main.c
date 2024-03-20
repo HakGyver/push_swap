@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:05:01 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/20 04:01:09 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/20 04:08:21 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char *argv[])
 	stack_b = NULL;
 	i = 0;
 	if (argc == 1 || ((argc == 2) && argv[1][0] == '\0'))
-		exit(0);
+		return (1);
 	while (++i < argc)
 	{
 		if (ft_check_and_add(&stack_a, ft_split(argv[i], ' ')) == false)
