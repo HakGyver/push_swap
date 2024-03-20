@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 12:56:43 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/19 17:29:33 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/20 04:00:30 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		ft_check_int(long long nb);
 int		ft_free_split(char **tab);
 int		ft_check_duplicate(t_list **stack_a);
 bool	is_sorted(t_list *stack);
+void	ft_error_exit(t_list **stack);
 
 /*LINKED LIST UTILS*/
 t_list	*ft_lstnew(int content);

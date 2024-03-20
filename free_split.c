@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:09:30 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/19 17:26:58 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/20 03:57:19 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,11 @@ void	ft_free_stack(t_list **stack)
 		temp = next;
 	}
 	*stack = NULL;
+	exit(0);
+}
+
+void	ft_error_exit(t_list **stack)
+{
+	write(2, "Error\n", 6);
+	ft_free_stack(stack);
 }

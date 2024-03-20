@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 14:42:22 by jteste            #+#    #+#             */
-/*   Updated: 2024/02/13 17:24:23 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/20 01:18:44 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_create_stack(t_list **stack_a, int nb)
 
 int	ft_check_int(long long nb)
 {
-	if (nb < -2147483648 || nb > 2147483647)
+	if (nb < INT_MIN || nb > INT_MAX)
 		return (false);
 	else
 		return (true);
