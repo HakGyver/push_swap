@@ -6,7 +6,7 @@
 /*   By: jteste <jteste@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 01:17:49 by jteste            #+#    #+#             */
-/*   Updated: 2024/03/19 03:50:35 by jteste           ###   ########.fr       */
+/*   Updated: 2024/03/21 03:10:55 by jteste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,17 +92,17 @@ void	calc_push_cost(t_list *stack_a, t_list *stack_b)
 
 void	calc_cheapest(t_list *stack_a)
 {
-	long	cheapest_content;
+	long	cheapest_push;
 	t_list	*cheapest_node;
 
 	if (stack_a == NULL)
 		return ;
-	cheapest_content = LONG_MAX;
+	cheapest_push = LONG_MAX;
 	while (stack_a != NULL)
 	{
-		if (stack_a->push_cost < cheapest_content)
+		if (stack_a->push_cost < cheapest_push)
 		{
-			cheapest_content = stack_a->push_cost;
+			cheapest_push = stack_a->push_cost;
 			cheapest_node = stack_a;
 		}
 		stack_a = stack_a->next;
